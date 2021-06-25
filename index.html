@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+    </head>
+    <body style = "text-align: center; background-color: turquoise">
+      <h1 style = "color: navy; font-size: 50px; font-weight: bolder; margin-bottom: 30px; margin-top: 15px;">My Family Book</h1>
+      <img style = "width: 200px; height: 250px; margin-bottom: 30px;;" id = "familyImg" src = "https://image.freepik.com/free-vector/happy-family-picnic-city-park-cartoon-vector_81522-1952.jpg"></img>
+      <br>
+      <p style = "margin-bottom: 30px; color: navy; font-weight: 600; font-size: 15px;" id = "names">Family Book</p>
+      <br>
+      <button style = "color: navy; background-color: yellow; font-weight: bold" onclick = next()>Next</button>
+      <script>
+          var i = 0;
+              var familyPic = [
+                  "https://www.pngitem.com/pimgs/m/57-573353_transparent-family-vector-png-cartoon-family-png-transparent.png", 
+                  "https://previews.123rf.com/images/kononok/kononok1810/kononok181000001/115456388-family-on-a-picnic-mom-dad-and-their-children-are-sitting-on-the-grass-there-is-a-basket-of-food-in-.jpg",
+                  "https://www.pngkey.com/png/detail/0-389_happy-family-cartoon-clipart.png",
+                  "https://image.freepik.com/free-vector/funny-cartoon-family-beautiful-park_43633-6229.jpg",
+                  "https://i.pinimg.com/originals/70/67/3e/70673ed5ba5a7d4f4416cc77f3bd86da.jpg",
+                  "https://image.freepik.com/free-vector/happy-family-picnic-city-park-cartoon-vector_81522-1952.jpg"
+              ];
+              var familyNames = [
+               "Family Book",
+               "Ranbir Singh",
+               "Diljeet Singh",
+               "Rockey Singh",
+               "Alia Singh",
+               "Soni Singh"
+              ];
+              function next() {
+                  i++;
+                  if (i > 5)
+                  {
+                      i = 0;
+                  }
+                  document.getElementById("familyImg").src = familyPic[i];
+                  document.getElementById("names").innerHTML = familyNames[i];
+              }
+      </script>
+    </body>
+</html>
